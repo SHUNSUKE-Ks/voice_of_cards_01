@@ -1,5 +1,6 @@
 import { useGameStore } from './core/stores/useGameStore';
 import { MapScreen } from './screens/MapScreen';
+import { ScenarioScreen } from './screens/ScenarioScreen';
 import './App.css';
 
 function TitleScreen() {
@@ -12,7 +13,7 @@ function TitleScreen() {
       <div className="menu-buttons">
         <button
           className="menu-button"
-          onClick={() => navigateTo('map')}
+          onClick={() => navigateTo('scenario')}
         >
           New Game
         </button>
@@ -31,6 +32,8 @@ function App() {
   const { currentScreen } = useGameStore();
 
   switch (currentScreen) {
+    case 'scenario':
+      return <ScenarioScreen />;
     case 'map':
       return <MapScreen />;
     case 'title':
@@ -40,3 +43,4 @@ function App() {
 }
 
 export default App;
+
