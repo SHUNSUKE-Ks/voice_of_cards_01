@@ -3,6 +3,10 @@ import { MapCard } from './MapCard';
 import { PlayerPawn } from './PlayerPawn';
 import './MapGrid.css';
 
+const CARD_WIDTH = 80;
+const CARD_HEIGHT = 100;
+const CARD_GAP = 4;
+
 export function MapGrid() {
     const { mapData, playerPos, isRevealed } = useMapStore();
 
@@ -24,12 +28,21 @@ export function MapGrid() {
         }
     });
 
+    // Calculate offset to center camera on player
+    const cellWidth = CARD_WIDTH + CARD_GAP;
+    const cellHeight = CARD_HEIGHT + CARD_GAP;
+    const offsetX = -playerPos.x * cellWidth;
+    const offsetY = -playerPos.y * cellHeight;
+
     return (
         <div
             className="map-grid"
             style={{
-                gridTemplateColumns: `repeat(${grid.width}, 70px)`,
-                gridTemplateRows: `repeat(${grid.height}, 100px)`,
+                gridTemplateColumns: `repeat(${grid.width}, ${CARD_WIDTH}px)`,
+                gridTemplateRows: `repeat(${grid.height}, ${CARD_HEIGHT}px)`,
+                gap: `${CARD_GAP}px`,
+                transform: `translate(${offsetX}px, ${offsetY}px)`,
+                transition: 'transform 0.3s ease-out',
             }}
         >
             {tileGrid.map((row, y) =>

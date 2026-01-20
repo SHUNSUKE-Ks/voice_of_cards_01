@@ -1,8 +1,7 @@
 .map-grid {
     display: grid;
-    gap: 2px;
     padding: 0;
-    transform-style: preserve-3d;
+    background: transparent;
 }
 
 .map-cell {
@@ -10,14 +9,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transform-style: preserve-3d;
 }
 
 .empty-tile {
-    width: 70px;
+    width: 80px;
     height: 100px;
-    background: rgba(30, 20, 15, 0.4);
-    border-radius: 4px;
+    background: rgba(30, 20, 15, 0.3);
+    border-radius: 6px;
+    border: 1px solid rgba(100, 80, 60, 0.3);
 }
 
 .map-loading {
