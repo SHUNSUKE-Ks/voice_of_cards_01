@@ -1,7 +1,8 @@
 .map-card-container {
-  width: 80px;
-  height: 112px;
+  width: 70px;
+  height: 100px;
   perspective: 600px;
+  transform-style: preserve-3d;
 }
 
 .map-card {
@@ -9,6 +10,11 @@
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.map-card:hover {
+  transform: translateZ(10px);
 }
 
 .map-card-face {
@@ -16,9 +22,11 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 6px;
-  border: 2px solid #c9a227;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  border: 2px solid rgba(201, 162, 39, 0.8);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,16 +36,37 @@
   transform: rotateY(0deg);
 }
 
+/* Terrain colors */
+.map-card-front.terrain-grass {
+  background: linear-gradient(135deg, #4a7c4e 0%, #3a5c3e 100%);
+}
+
+.map-card-front.terrain-forest {
+  background: linear-gradient(135deg, #2d5a30 0%, #1e3d20 100%);
+}
+
+.map-card-front.terrain-water {
+  background: linear-gradient(135deg, #2a5a7c 0%, #1a3a5c 100%);
+}
+
+.map-card-front.terrain-road {
+  background: linear-gradient(135deg, #8b7355 0%, #6b5340 100%);
+}
+
+.map-card-front.terrain-town {
+  background: linear-gradient(135deg, #8b6914 0%, #6b4910 100%);
+}
+
 .map-card-back {
   transform: rotateY(180deg);
   background: linear-gradient(135deg, #1a2a4a 0%, #0d1a2d 100%);
 }
 
 .terrain-label {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .blocked-overlay {
@@ -45,13 +74,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 32px;
-  color: rgba(255, 0, 0, 0.6);
+  font-size: 24px;
+  color: rgba(255, 0, 0, 0.5);
   font-weight: bold;
 }
 
 .card-pattern {
-  font-size: 32px;
-  color: #c9a227;
-  opacity: 0.7;
+  font-size: 28px;
+  color: #d4af37;
+  opacity: 0.8;
 }

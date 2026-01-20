@@ -28,8 +28,8 @@ export function MapGrid() {
         <div
             className="map-grid"
             style={{
-                gridTemplateColumns: `repeat(${grid.width}, 80px)`,
-                gridTemplateRows: `repeat(${grid.height}, 112px)`,
+                gridTemplateColumns: `repeat(${grid.width}, 70px)`,
+                gridTemplateRows: `repeat(${grid.height}, 100px)`,
             }}
         >
             {tileGrid.map((row, y) =>
