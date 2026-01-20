@@ -56,6 +56,17 @@ export function ScenarioScreen() {
         const cmd = nextCommand();
         if (cmd) {
             processCommand(cmd);
+            // Check if scenario ended after processing
+            setTimeout(() => {
+                const state = useScenarioStore.getState();
+                const scene = state.scenarioData?.scenes[state.currentSceneId];
+                if (!scene || state.commandIndex >= scene.length) {
+                    // End of scenario - navigate to map
+                    if (!state.currentChoices) {
+                        navigateTo('map');
+                    }
+                }
+            }, 50);
         } else {
             // End of scenario
             navigateTo('map');
