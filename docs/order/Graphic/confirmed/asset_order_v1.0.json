@@ -1,0 +1,130 @@
+[
+    {
+        "id": "characters",
+        "title": "1. キャラクターカード",
+        "assets": [
+            {
+                "id": "CH-001",
+                "name": "主人公 (通常)",
+                "fileName": "ch_hero_normal.png",
+                "category": "characters",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Character portrait inside gold frame, young male adventurer, short brown hair, determined eyes, upper body"
+            },
+            {
+                "id": "CH-002",
+                "name": "主人公 (笑顔)",
+                "fileName": "ch_hero_smile.png",
+                "category": "characters",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Character portrait inside gold frame, young male adventurer, warm friendly smile"
+            },
+            {
+                "id": "CH-010",
+                "name": "GM (通常)",
+                "fileName": "ch_gm_normal.png",
+                "category": "characters",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Character portrait inside ornate frame, mysterious hooded figure, elegant robes, wise eyes"
+            },
+            {
+                "id": "CH-020",
+                "name": "女戦士",
+                "fileName": "ch_warrior_normal.png",
+                "category": "characters",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Character portrait inside gold frame, fierce female warrior, silver hair, plate armor"
+            },
+            {
+                "id": "CH-030",
+                "name": "魔法使い",
+                "fileName": "ch_mage_normal.png",
+                "category": "characters",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Character portrait inside blue magical frame, young female mage, holding staff"
+            }
+        ]
+    },
+    {
+        "id": "enemies",
+        "title": "2. 敵カード",
+        "assets": [
+            {
+                "id": "EN-001",
+                "name": "スライム",
+                "fileName": "en_slime.png",
+                "category": "enemies",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Enemy card monster inside stone frame, green translucent slime creature"
+            },
+            {
+                "id": "EN-002",
+                "name": "ゴブリン",
+                "fileName": "en_goblin.png",
+                "category": "enemies",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Enemy card monster inside stone frame, green goblin with dagger"
+            },
+            {
+                "id": "EN-010",
+                "name": "ドラゴン",
+                "fileName": "en_dragon.png",
+                "category": "enemies",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Boss monster card inside huge ornate frame, massive red dragon"
+            }
+        ]
+    },
+    {
+        "id": "backgrounds",
+        "title": "3. 背景素材",
+        "assets": [
+            {
+                "id": "BG-001",
+                "name": "酒場",
+                "fileName": "bg_tavern_day.png",
+                "category": "backgrounds",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Background landscape illustration inside rectangular frame, fantasy tavern interior, hand-painted style"
+            },
+            {
+                "id": "BG-002",
+                "name": "森",
+                "fileName": "bg_forest_day.png",
+                "category": "backgrounds",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Background landscape illustration inside rectangular frame, lush sunlit forest path"
+            }
+        ]
+    },
+    {
+        "id": "tiles",
+        "title": "4. マップタイル素材",
+        "assets": [
+            {
+                "id": "TL-001",
+                "name": "草原",
+                "fileName": "tile_grass.png",
+                "category": "tiles",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Square map tile, lush green meadow, top-down perspective"
+            },
+            {
+                "id": "TL-002",
+                "name": "森",
+                "fileName": "tile_forest.png",
+                "category": "tiles",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Square map tile, dense forest landscape, top-down"
+            },
+            {
+                "id": "TL-010",
+                "name": "タイル裏面",
+                "fileName": "tile_back.png",
+                "category": "tiles",
+                "status": "idle",
+                "prompt": "\"Voice of Cards\" style 2D game card asset, elegant gold card frame with intricate borders, hand-painted fantasy illustration inside the frame, high quality tabletop RPG material, flat game UI component, white background, isolated asset, game ready, Card back design, ornate mystical symmetry pattern"
+            }
+        ]
+    }
+]

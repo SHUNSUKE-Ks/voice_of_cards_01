@@ -1,0 +1,392 @@
+{
+    "scenarioId": "demo_01",
+    "scenes": {
+        "start": [
+            {
+                "type": "bg",
+                "value": "bg_tavern"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "ようこそ、ボイスカードの世界へ。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "ここは全てがカードで描かれた、空想と冒険の世界だ。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "君の目の前にあるのは、無数の傷が刻まれた木製のテーブル。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "まず、君には２つの選択肢が用意されている。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "剣の道を究めるか、魔導の道を究めるか？"
+            },
+            {
+                "type": "show_card",
+                "cardId": "job_sword",
+                "position": "left"
+            },
+            {
+                "type": "show_card",
+                "cardId": "job_magic",
+                "position": "right"
+            },
+            {
+                "type": "choice",
+                "options": [
+                    {
+                        "label": "剣士",
+                        "nextScene": "scene_job_selected",
+                        "action": "set_flag_sword"
+                    },
+                    {
+                        "label": "魔法使い",
+                        "nextScene": "scene_job_selected",
+                        "action": "set_flag_magic"
+                    }
+                ]
+            }
+        ],
+        "scene_job_selected": [
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "……なるほど。それが君の選んだ道か。"
+            },
+            {
+                "type": "hide_card",
+                "cardId": "job_sword"
+            },
+            {
+                "type": "hide_card",
+                "cardId": "job_magic"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "そして一枚の、古びた依頼書。「伝説の薬」を作るための、素材採取の依頼だ。"
+            },
+            {
+                "type": "choice",
+                "options": [
+                    {
+                        "label": "依頼書を手に取る",
+                        "nextScene": "scene_accept"
+                    },
+                    {
+                        "label": "無視して酒を飲む",
+                        "nextScene": "scene_ignore"
+                    }
+                ]
+            }
+        ],
+        "scene_accept": [
+            {
+                "type": "show_card",
+                "cardId": "hero",
+                "position": "left"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "君は静かに頷き、そのカードを手に取った。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "素晴らしい。その決断が、運命の歯車を回すことになる。"
+            },
+            {
+                "type": "jump",
+                "nextScene": "scene_forest"
+            }
+        ],
+        "scene_ignore": [
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "君はグラスを傾け、紫煙の向こうへ視線をやった。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "……ふむ。今はまだ、旅立ちの気分ではないかな？"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "だが、酒場のマスターが無言で出口を指差している。どうやら、冒険へ出かける潮時のようだ。"
+            },
+            {
+                "type": "jump",
+                "nextScene": "scene_forest"
+            }
+        ],
+        "scene_forest": [
+            {
+                "type": "bg",
+                "value": "bg_deep_forest"
+            },
+            {
+                "type": "show_card",
+                "cardId": "hero",
+                "position": "left"
+            },
+            {
+                "type": "show_card",
+                "cardId": "partner_rina",
+                "position": "right"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "街の喧騒を離れ、鬱蒼とした森の中へ。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "隣を歩くのは、幼馴染のリナだ。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "彼女は大きな地図を広げ……おや、逆さまに持っているね。"
+            },
+            {
+                "type": "text",
+                "speaker": "リナ",
+                "content": "「こっちであってるよね？ ……たぶん！」"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "彼女の指差す先は、道なき藪の中だ。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "だが、そんな失敗も旅のスパイスなのかもしれない。"
+            },
+            {
+                "type": "choice",
+                "options": [
+                    {
+                        "label": "リナに注意する",
+                        "nextScene": "scene_caution"
+                    },
+                    {
+                        "label": "黙ってついていく",
+                        "nextScene": "scene_follow"
+                    }
+                ]
+            }
+        ],
+        "scene_caution": [
+            {
+                "type": "text",
+                "speaker": "主人公",
+                "content": "「……地図が逆だ」"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "君が優しく指摘すると、彼女は慌てて地図を直した。"
+            },
+            {
+                "type": "text",
+                "speaker": "リナ",
+                "content": "「わ、わかってたし！ 視点を変えて見てただけだし！」"
+            },
+            {
+                "type": "jump",
+                "nextScene": "scene_forest_event"
+            }
+        ],
+        "scene_follow": [
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "君は何も言わず、彼女のペースに合わせることにした。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "道に迷うのも、また冒険の醍醐味だからね。"
+            },
+            {
+                "type": "jump",
+                "nextScene": "scene_forest_event"
+            }
+        ],
+        "scene_forest_event": [
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "その時、森の空気が変わった。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "鳥たちのさえずりが止み、静寂があたりを包み込む。"
+            },
+            {
+                "type": "show_card",
+                "cardId": "hero",
+                "position": "center"
+            },
+            {
+                "type": "hide_card",
+                "cardId": "partner_rina"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "君は本能的に剣の柄に手をかけた。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "闇の奥から、こちらを伺う視線を感じる……。"
+            },
+            {
+                "type": "jump",
+                "nextScene": "scene_boss_encounter"
+            }
+        ],
+        "scene_boss_encounter": [
+            {
+                "type": "bg",
+                "value": "bg_deep_forest_boss"
+            },
+            {
+                "type": "show_card",
+                "cardId": "monster_boss",
+                "position": "center"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "茂みをかき分け現れたのは、森の主。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "その巨大な爪は、君たちの覚悟を試すように光っている。"
+            },
+            {
+                "type": "text",
+                "speaker": "リナ",
+                "content": "「ひゃっ！？ お、大きい……！」"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "リナが悲鳴を上げ、君の背中に隠れる。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "恐れることはない。君の手札には、勇気というカードがあるはずだ。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "さあ、盤上の駒を進めようか。"
+            },
+            {
+                "type": "battle",
+                "enemyId": "boss_monster",
+                "nextScene": "scene_battle_end"
+            }
+        ],
+        "scene_battle_end": [
+            {
+                "type": "bg",
+                "value": "bg_deep_forest"
+            },
+            {
+                "type": "hide_card",
+                "cardId": "monster_boss"
+            },
+            {
+                "type": "show_card",
+                "cardId": "hero",
+                "position": "left"
+            },
+            {
+                "type": "show_card",
+                "cardId": "partner_rina",
+                "position": "right"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "見事だ。君の一撃が、森の静寂を取り戻した。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "倒れた主の背後……開けた視界の先に、美しい花畑が広がっている。"
+            },
+            {
+                "type": "bg",
+                "value": "bg_flower_garden"
+            },
+            {
+                "type": "text",
+                "speaker": "リナ",
+                "content": "「わぁ……！ 見て、あそこに咲いてるのって！」"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "そこに咲いていたのは、夜露に濡れて輝く「月光草」。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "探し求めていた、薬の材料だ。"
+            },
+            {
+                "type": "text",
+                "speaker": "リナ",
+                "content": "「やったぁ！ 私たち、最強のコンビだね！」"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "リナの笑顔が、勝利の喜びを彩る。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "君もまた、安堵の息をついたことだろう。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "こうして、最初の冒険は幕を閉じた。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "だが、世界は広く、カードの山はまだ残されている。"
+            },
+            {
+                "type": "text",
+                "speaker": "GM",
+                "content": "次のページをめくる時まで……しばしの休息といこうか。"
+            }
+        ]
+    }
+}

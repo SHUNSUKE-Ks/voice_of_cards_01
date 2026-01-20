@@ -1,0 +1,311 @@
+{
+    "version": "2.0",
+    "lastUpdated": "2026-01-20",
+    "notes": "拡張版：カードタイプ、レイアウトオプション、ステータス情報を追加。プロンプトからテキスト・ステータス表示を除去（アプリ側でオーバーレイ）",
+    "priorityPrompt": {
+        "description": "NanoBananaProで設定するマスタープロンプト（アートディレクション）",
+        "recommended": "[Character Description], in the style of dark fantasy concept art, ink and watercolor illustration, distinct bold sketch lines, cross-hatching texture, muted desaturated colors, sepia tone, gothic aesthetic, tarot card art style, detailed character design, vintage parchment paper texture, white background, masterpiece, high quality, 8k --ar 2:3"
+    },
+    "cardTypes": {
+        "character": {
+            "description": "キャラクターカード - 名前は上、表情差分対応",
+            "isTransparent": true,
+            "layoutSpec": {
+                "namePosition": "top",
+                "borderWidth": "thin",
+                "aspectRatio": "5:7",
+                "size": "400x560px"
+            }
+        },
+        "enemy": {
+            "description": "敵カード - 名前は上、ステータスはアタッチカードで表示",
+            "isTransparent": true,
+            "layoutSpec": {
+                "namePosition": "top",
+                "borderWidth": "thin",
+                "borderStyle": "stone",
+                "aspectRatio": "5:7",
+                "size": "400x560px"
+            }
+        },
+        "item": {
+            "description": "アイテムカード - 名前は下",
+            "isTransparent": true,
+            "layoutSpec": {
+                "namePosition": "bottom",
+                "aspectRatio": "5:7",
+                "size": "400x560px"
+            }
+        },
+        "battleStatus": {
+            "description": "バトルステータスカード - キャラ/敵カードにアタッチして使用",
+            "layoutSpec": {
+                "size": "200x80px",
+                "displays": [
+                    "HP",
+                    "ATK",
+                    "DEF"
+                ]
+            }
+        },
+        "jobSelection": {
+            "description": "ジョブ選択カード - 黒シルエット、名前は上",
+            "layoutSpec": {
+                "namePosition": "top",
+                "style": "silhouette",
+                "aspectRatio": "5:7",
+                "size": "400x560px"
+            }
+        },
+        "background": {
+            "description": "背景カード - 名前は上部タイトルバー",
+            "layoutSpec": {
+                "namePosition": "top-banner",
+                "aspectRatio": "16:9"
+            }
+        },
+        "tile": {
+            "description": "マップタイル",
+            "layoutSpec": {
+                "namePosition": "bottom",
+                "aspectRatio": "5:7",
+                "size": "120x168px"
+            }
+        }
+    },
+    "categories": [
+        {
+            "id": "characters",
+            "title": "1. キャラクターカード",
+            "cardType": "character",
+            "assets": [
+                {
+                    "id": "CH-001",
+                    "name": "主人公",
+                    "nameDisplay": "勇者",
+                    "fileName": "ch_hero_normal.png",
+                    "category": "characters",
+                    "status": "idle",
+                    "expressions": [
+                        "normal",
+                        "smile",
+                        "angry",
+                        "sad",
+                        "surprised"
+                    ],
+                    "prompt": "Young male adventurer, short brown hair, determined blue eyes, red scarf, leather armor with metal shoulder guard, upper body, no text, no frame text, no name label",
+                    "notes": "表情差分は別ファイルで生成 (ch_hero_smile.png等)"
+                },
+                {
+                    "id": "CH-010",
+                    "name": "GM",
+                    "nameDisplay": "語り部",
+                    "fileName": "ch_gm_normal.png",
+                    "category": "characters",
+                    "status": "idle",
+                    "expressions": [
+                        "normal",
+                        "mysterious"
+                    ],
+                    "prompt": "Mysterious hooded figure, elegant dark robes, glowing wise eyes beneath hood, upper body, no text, no frame text"
+                },
+                {
+                    "id": "CH-020",
+                    "name": "女戦士",
+                    "nameDisplay": "アリア",
+                    "fileName": "ch_warrior_normal.png",
+                    "category": "characters",
+                    "status": "idle",
+                    "expressions": [
+                        "normal",
+                        "battle",
+                        "smile"
+                    ],
+                    "prompt": "Fierce female warrior, silver hair in ponytail, shining plate armor, confident expression, upper body, no text, no frame text"
+                },
+                {
+                    "id": "CH-030",
+                    "name": "魔法使い",
+                    "nameDisplay": "セレナ",
+                    "fileName": "ch_mage_normal.png",
+                    "category": "characters",
+                    "status": "idle",
+                    "expressions": [
+                        "normal",
+                        "casting",
+                        "smile"
+                    ],
+                    "prompt": "Young female mage, long purple hair, blue magical robes, holding ornate staff, mystical aura, upper body, no text, no frame text"
+                }
+            ]
+        },
+        {
+            "id": "enemies",
+            "title": "2. 敵カード",
+            "cardType": "enemy",
+            "assets": [
+                {
+                    "id": "EN-001",
+                    "name": "スライム",
+                    "nameDisplay": "Slime",
+                    "fileName": "en_slime.png",
+                    "category": "enemies",
+                    "status": "idle",
+                    "stats": {
+                        "hp": 20,
+                        "atk": 5,
+                        "def": 2
+                    },
+                    "prompt": "Green translucent slime creature, cute but menacing, dripping form, no text, no numbers, no stats display, no HP/ATK labels"
+                },
+                {
+                    "id": "EN-002",
+                    "name": "ゴブリン",
+                    "nameDisplay": "Goblin",
+                    "fileName": "en_goblin.png",
+                    "category": "enemies",
+                    "status": "idle",
+                    "stats": {
+                        "hp": 35,
+                        "atk": 12,
+                        "def": 5
+                    },
+                    "prompt": "Green goblin warrior, holding rusty dagger, tattered leather armor, menacing grin, no text, no numbers, no stats display"
+                },
+                {
+                    "id": "EN-010",
+                    "name": "ドラゴン",
+                    "nameDisplay": "Dragon",
+                    "fileName": "en_dragon.png",
+                    "category": "enemies",
+                    "status": "idle",
+                    "isBoss": true,
+                    "stats": {
+                        "hp": 500,
+                        "atk": 80,
+                        "def": 40
+                    },
+                    "prompt": "Massive red dragon, fearsome scales, glowing eyes, fire breath ready, epic composition, no text, no numbers, no stats display"
+                }
+            ]
+        },
+        {
+            "id": "jobCards",
+            "title": "3. ジョブ選択カード",
+            "cardType": "jobSelection",
+            "assets": [
+                {
+                    "id": "JOB-001",
+                    "name": "戦士シルエット",
+                    "nameDisplay": "戦士",
+                    "fileName": "job_warrior_silhouette.png",
+                    "category": "jobCards",
+                    "status": "idle",
+                    "prompt": "Black silhouette of a warrior holding sword, dynamic pose, mysterious shadow figure, solid black shape on white background, no details visible, elegant thin gold border, no text"
+                },
+                {
+                    "id": "JOB-002",
+                    "name": "魔法使いシルエット",
+                    "nameDisplay": "魔法使い",
+                    "fileName": "job_mage_silhouette.png",
+                    "category": "jobCards",
+                    "status": "idle",
+                    "prompt": "Black silhouette of a mage holding staff, flowing robes, mysterious shadow figure, solid black shape on white background, no details visible, elegant thin gold border, no text"
+                },
+                {
+                    "id": "JOB-003",
+                    "name": "僧侶シルエット",
+                    "nameDisplay": "僧侶",
+                    "fileName": "job_priest_silhouette.png",
+                    "category": "jobCards",
+                    "status": "idle",
+                    "prompt": "Black silhouette of a priest/healer, praying pose or holding holy symbol, mysterious shadow figure, solid black shape on white background, no details visible, elegant thin gold border, no text"
+                },
+                {
+                    "id": "JOB-004",
+                    "name": "盗賊シルエット",
+                    "nameDisplay": "盗賊",
+                    "fileName": "job_thief_silhouette.png",
+                    "category": "jobCards",
+                    "status": "idle",
+                    "prompt": "Black silhouette of a thief/rogue, dual daggers, agile pose, mysterious shadow figure, solid black shape on white background, no details visible, elegant thin gold border, no text"
+                }
+            ]
+        },
+        {
+            "id": "backgrounds",
+            "title": "4. 背景素材",
+            "cardType": "background",
+            "assets": [
+                {
+                    "id": "BG-001",
+                    "name": "酒場",
+                    "nameDisplay": "TAVERN",
+                    "fileName": "bg_tavern_day.png",
+                    "category": "backgrounds",
+                    "status": "idle",
+                    "prompt": "Fantasy tavern interior, warm lighting, wooden tables, fireplace, hand-painted watercolor style, no text, no title banner"
+                },
+                {
+                    "id": "BG-002",
+                    "name": "森",
+                    "nameDisplay": "FOREST",
+                    "fileName": "bg_forest_day.png",
+                    "category": "backgrounds",
+                    "status": "idle",
+                    "prompt": "Lush sunlit forest path, dappled light through leaves, mystical atmosphere, hand-painted watercolor style, no text, no title banner"
+                }
+            ]
+        },
+        {
+            "id": "tiles",
+            "title": "5. マップタイル素材",
+            "cardType": "tile",
+            "assets": [
+                {
+                    "id": "TL-001",
+                    "name": "草原",
+                    "nameDisplay": "Meadow",
+                    "fileName": "tile_grass.png",
+                    "category": "tiles",
+                    "status": "idle",
+                    "prompt": "Square map tile, lush green meadow, wildflowers, top-down perspective, hand-painted style, thin elegant gold border, no text"
+                },
+                {
+                    "id": "TL-002",
+                    "name": "森",
+                    "nameDisplay": "Forest",
+                    "fileName": "tile_forest.png",
+                    "category": "tiles",
+                    "status": "idle",
+                    "prompt": "Square map tile, dense forest with tall trees, top-down perspective, hand-painted style, thin elegant gold border, no text"
+                },
+                {
+                    "id": "TL-010",
+                    "name": "タイル裏面",
+                    "nameDisplay": "",
+                    "fileName": "tile_back.png",
+                    "category": "tiles",
+                    "status": "idle",
+                    "prompt": "Card back design, ornate mystical symmetry pattern, dark elegant colors, gold accents, no text"
+                }
+            ]
+        },
+        {
+            "id": "battleStatusCards",
+            "title": "6. バトルステータスカード",
+            "cardType": "battleStatus",
+            "notes": "キャラクター/敵カードにアタッチするステータス表示用コンポーネント。画像ではなくCSS/JSで実装推奨",
+            "assets": [
+                {
+                    "id": "BSC-001",
+                    "name": "ステータスフレーム",
+                    "fileName": "ui_status_frame.png",
+                    "category": "ui",
+                    "status": "idle",
+                    "prompt": "UI frame component, horizontal bar with three sections for HP/ATK/DEF display, elegant gold border, ornate fantasy style, transparent center for text overlay, no text"
+                }
+            ]
+        }
+    ]
+}
