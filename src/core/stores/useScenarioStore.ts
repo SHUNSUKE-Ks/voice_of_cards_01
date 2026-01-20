@@ -95,7 +95,7 @@ export const useScenarioStore = create<ScenarioState>((set, get) => ({
                 // Auto-advance for non-blocking commands
                 setTimeout(() => {
                     const next = get().nextCommand();
-                    if (next && next.type !== 'text' && next.type !== 'choice') {
+                    if (next) {
                         get().processCommand(next);
                     }
                 }, 0);
@@ -106,7 +106,7 @@ export const useScenarioStore = create<ScenarioState>((set, get) => ({
                 set({ commandIndex: state.commandIndex + 1 });
                 setTimeout(() => {
                     const next = get().nextCommand();
-                    if (next && next.type !== 'text' && next.type !== 'choice') {
+                    if (next) {
                         get().processCommand(next);
                     }
                 }, 0);
@@ -117,7 +117,7 @@ export const useScenarioStore = create<ScenarioState>((set, get) => ({
                 set({ commandIndex: state.commandIndex + 1 });
                 setTimeout(() => {
                     const next = get().nextCommand();
-                    if (next && next.type !== 'text' && next.type !== 'choice') {
+                    if (next) {
                         get().processCommand(next);
                     }
                 }, 0);

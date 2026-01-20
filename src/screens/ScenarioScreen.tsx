@@ -51,24 +51,44 @@ export function ScenarioScreen() {
 
     // Handle click to advance text
     const handleClick = useCallback(() => {
-        if (!isWaitingForInput || currentChoices) return;
+        console.log('[DEBUG] handleClick triggered');
+        console.log('[DEBUG] isWaitingForInput:', isWaitingForInput);
+        console.log('[DEBUG] currentChoices:', currentChoices);
+
+        if (!isWaitingForInput || currentChoices) {
+            console.log('[DEBUG] Early return - not waiting or has choices');
+            return;
+        }
 
         const cmd = nextCommand();
+        console.log('[DEBUG] nextCommand returned:', cmd);
+
         if (cmd) {
+            console.log('[DEBUG] Processing command:', cmd.type);
             processCommand(cmd);
+
             // Check if scenario ended after processing
             setTimeout(() => {
                 const state = useScenarioStore.getState();
+                console.log('[DEBUG] After processing - sceneId:', state.currentSceneId);
+                console.log('[DEBUG] After processing - commandIndex:', state.commandIndex);
+
                 const scene = state.scenarioData?.scenes[state.currentSceneId];
-                if (!scene || state.commandIndex >= scene.length) {
+                const sceneLength = scene?.length || 0;
+                console.log('[DEBUG] Scene length:', sceneLength);
+                console.log('[DEBUG] Is end?:', state.commandIndex >= sceneLength);
+                console.log('[DEBUG] Has choices?:', !!state.currentChoices);
+
+                if (!scene || state.commandIndex >= sceneLength) {
                     // End of scenario - navigate to map
                     if (!state.currentChoices) {
+                        console.log('[DEBUG] *** NAVIGATING TO MAP ***');
                         navigateTo('map');
                     }
                 }
             }, 50);
         } else {
-            // End of scenario
+            console.log('[DEBUG] No command - END OF SCENARIO - navigating to map');
             navigateTo('map');
         }
     }, [isWaitingForInput, currentChoices, nextCommand, processCommand, navigateTo]);
