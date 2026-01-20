@@ -3,9 +3,9 @@ import { MapCard } from './MapCard';
 import { PlayerPawn } from './PlayerPawn';
 import './MapGrid.css';
 
-const CARD_WIDTH = 80;
-const CARD_HEIGHT = 100;
-const CARD_GAP = 4;
+const CARD_WIDTH = 160;
+const CARD_HEIGHT = 200;
+const CARD_GAP = 8;
 
 export function MapGrid() {
     const { mapData, playerPos, isRevealed } = useMapStore();
@@ -29,10 +29,13 @@ export function MapGrid() {
     });
 
     // Calculate offset to center camera on player
+    // Grid total size
     const cellWidth = CARD_WIDTH + CARD_GAP;
     const cellHeight = CARD_HEIGHT + CARD_GAP;
-    const offsetX = -playerPos.x * cellWidth;
-    const offsetY = -playerPos.y * cellHeight;
+
+    // Player position in pixels (center of player's cell)
+    const playerPixelX = playerPos.x * cellWidth + CARD_WIDTH / 2;
+    const playerPixelY = playerPos.y * cellHeight + CARD_HEIGHT / 2;
 
     return (
         <div
@@ -41,7 +44,7 @@ export function MapGrid() {
                 gridTemplateColumns: `repeat(${grid.width}, ${CARD_WIDTH}px)`,
                 gridTemplateRows: `repeat(${grid.height}, ${CARD_HEIGHT}px)`,
                 gap: `${CARD_GAP}px`,
-                transform: `translate(${offsetX}px, ${offsetY}px)`,
+                transform: `translate(calc(50vw - ${playerPixelX}px), calc(50vh - ${playerPixelY}px))`,
                 transition: 'transform 0.3s ease-out',
             }}
         >
