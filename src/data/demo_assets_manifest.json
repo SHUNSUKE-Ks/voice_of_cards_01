@@ -1,40 +1,43 @@
 {
     "ASSET_MANIFEST": {
         "COMMON_UI": {
-            "CARD_FRAME": "assets/ui/card_frame_dummy.svg",
-            "CARD_BACK": "assets/ui/card_back_dummy.svg",
-            "CURSOR_HAND": "assets/ui/cursor_hand_dummy.svg"
+            "CARD_FRAME": "/assets/ui/card_frame_dummy.svg",
+            "CARD_BACK": "/assets/ui/card_back_dummy.svg",
+            "CURSOR_HAND": "/assets/ui/cursor_hand_dummy.svg"
         },
         "TITLE": {
-            "BG": "assets/bg/title_bg_dummy.svg",
-            "LOGO": "assets/ui/title_logo_dummy.svg",
-            "BTN_START": "assets/ui/btn_start_dummy.svg"
+            "BG": "/assets/bg/title_bg_dummy.svg",
+            "LOGO": "/assets/ui/title_logo_dummy.svg",
+            "BTN_START": "/assets/ui/btn_start_dummy.svg"
         },
         "MAP": {
-            "TILE_GRASS": "assets/tiles/tile_grass_dummy.svg",
-            "TILE_FOREST": "assets/tiles/tile_forest_dummy.svg",
-            "TILE_WATER": "assets/tiles/tile_water_dummy.svg",
-            "PAWN_HERO": "assets/sprites/pawn_hero_dummy.svg"
+            "TILE_GRASS": "/assets/tiles/tile_grass_dummy.svg",
+            "TILE_FOREST": "/assets/tiles/tile_forest_dummy.svg",
+            "TILE_WATER": "/assets/tiles/tile_water_dummy.svg",
+            "PAWN_HERO": "/assets/sprites/pawn_hero_dummy.svg"
         },
         "BATTLE": {
-            "BG_MAT": "assets/bg/battle_mat_dummy.svg",
-            "GEM_BOX": "assets/ui/gem_box_dummy.svg",
-            "DICE": "assets/ui/dice_dummy.svg"
+            "BG_MAT": "/assets/bg/battle_mat_dummy.svg",
+            "GEM_BOX": "/assets/ui/gem_box_dummy.svg",
+            "DICE": "/assets/ui/dice_dummy.svg"
+        },
+        "BACKGROUNDS": {
+            "FOREST_DAY": "/assets/bg/bg_forest_day.png"
         },
         "CHARACTERS": {
-            "HERO_CARD": "assets/cards/ch_hero_normal.png",
-            "RINA_CARD": "assets/cards/ch_mage_normal.png",
-            "WARRIOR_CARD": "assets/cards/ch_warrior_normal.png",
-            "GM_CARD": "assets/cards/ch_gm_normal.png",
-            "MONSTER_SLIME": "assets/cards/en_slime.png",
-            "MONSTER_GOBLIN": "assets/cards/en_goblin.png",
-            "MONSTER_DRAGON": "assets/cards/en_dragon.png"
+            "HERO_CARD": "/assets/cards/ch_hero_normal.png",
+            "RINA_CARD": "/assets/cards/ch_mage_normal.png",
+            "WARRIOR_CARD": "/assets/cards/ch_warrior_normal.png",
+            "GM_CARD": "/assets/cards/ch_gm_normal.png",
+            "MONSTER_SLIME": "/assets/cards/en_slime.png",
+            "MONSTER_GOBLIN": "/assets/cards/en_goblin.png",
+            "MONSTER_DRAGON": "/assets/cards/en_dragon.png"
         },
         "JOB_CARDS": {
-            "WARRIOR": "assets/cards/job_warrior_silhouette.png",
-            "MAGE": "assets/cards/job_mage_silhouette.png",
-            "PRIEST": "assets/cards/job_priest_silhouette.png",
-            "THIEF": "assets/cards/job_thief_silhouette.png"
+            "WARRIOR": "/assets/cards/job_warrior_silhouette.png",
+            "MAGE": "/assets/cards/job_mage_silhouette.png",
+            "PRIEST": "/assets/cards/job_priest_silhouette.png",
+            "THIEF": "/assets/cards/job_thief_silhouette.png"
         }
     }
 }
