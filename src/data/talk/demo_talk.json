@@ -1,0 +1,77 @@
+{
+    "sceneId": "demo_talk_01",
+    "dialogs": [
+        {
+            "id": "d1",
+            "speaker": "hero",
+            "speakerName": "勇者",
+            "content": "ここが噂の酒場か…。冒険者たちの情報が集まる場所だと聞いてきたが。",
+            "leftCard": "hero",
+            "rightTopCard": "gm"
+        },
+        {
+            "id": "d2",
+            "speaker": "gm",
+            "speakerName": "語り手",
+            "content": "カウンターの向こうで、一人の老人がグラスを磨いている。彼こそがこの酒場の主人だ。",
+            "leftCard": "hero",
+            "rightTopCard": "gm"
+        },
+        {
+            "id": "d3",
+            "speaker": "hero",
+            "speakerName": "勇者",
+            "content": "すみません、スプリフィッシュを探しているのですが…。",
+            "highlights": [
+                "スプリフィッシュ"
+            ],
+            "leftCard": "hero",
+            "rightTopCard": "gm"
+        },
+        {
+            "id": "d4",
+            "speaker": "gm",
+            "speakerName": "語り手",
+            "content": "老人は答えた。「あぁ、スプリフィッシュか。手伝ってやってもいいが…」",
+            "leftCard": "hero",
+            "rightTopCard": "gm",
+            "choices": [
+                {
+                    "id": "c1",
+                    "label": "はい",
+                    "nextDialogId": "d5_yes"
+                },
+                {
+                    "id": "c2",
+                    "label": "いいえ",
+                    "nextDialogId": "d5_no"
+                }
+            ]
+        },
+        {
+            "id": "d5_yes",
+            "speaker": "hero",
+            "speakerName": "勇者",
+            "content": "ぜひお願いします！どんな条件でも受け入れます！",
+            "leftCard": "hero",
+            "rightTopCard": "gm"
+        },
+        {
+            "id": "d5_no",
+            "speaker": "hero",
+            "speakerName": "勇者",
+            "content": "いえ、自分で探してみます。ありがとうございました。",
+            "leftCard": "hero",
+            "rightTopCard": "gm"
+        },
+        {
+            "id": "d6",
+            "speaker": "rina",
+            "speakerName": "リナ",
+            "content": "私も一緒に探すわ！きっと見つけてみせる！",
+            "leftCard": "hero",
+            "rightTopCard": "rina",
+            "rightBottomCard": "gm"
+        }
+    ]
+}

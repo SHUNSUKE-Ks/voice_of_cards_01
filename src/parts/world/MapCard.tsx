@@ -5,8 +5,6 @@ interface MapCardProps {
     terrainCardId: string;
     isRevealed: boolean;
     isTraversable: boolean;
-    x: number;
-    y: number;
 }
 
 const TERRAIN_COLORS: Record<string, string> = {
@@ -18,7 +16,7 @@ const TERRAIN_COLORS: Record<string, string> = {
     tile_mountain: '#6b6b6b',
 };
 
-export function MapCard({ terrainCardId, isRevealed, isTraversable, x, y }: MapCardProps) {
+export function MapCard({ terrainCardId, isRevealed, isTraversable }: MapCardProps) {
     const bgColor = TERRAIN_COLORS[terrainCardId] || '#666';
 
     return (

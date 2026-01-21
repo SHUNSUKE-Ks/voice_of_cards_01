@@ -1,0 +1,29 @@
+/* 固定1920x1080ビューポート */
+:root {
+    --game-width: 1920;
+    --game-height: 1080;
+}
+
+.game-viewport-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    overflow: hidden;
+}
+
+.game-viewport {
+    /* 固定サイズ */
+    width: 1920px;
+    height: 1080px;
+
+    /* スケーリング */
+    transform-origin: center center;
+
+    /* コンテンツ */
+    position: relative;
+    overflow: hidden;
+    background: #0d0a08;
+}

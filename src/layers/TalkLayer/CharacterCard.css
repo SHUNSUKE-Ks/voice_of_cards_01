@@ -1,0 +1,46 @@
+.character-card {
+    transition: filter 0.3s ease;
+}
+
+.character-card--active {
+    z-index: 10;
+}
+
+.character-card:not(.character-card--active) {
+    filter: brightness(0.7);
+}
+
+.character-card--selected {
+    outline: 3px solid #0f0 !important;
+    outline-offset: 4px;
+}
+
+.character-card__frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: 4px solid #c9a227;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        inset 0 2px 4px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    background: linear-gradient(135deg, #2a2520 0%, #1a1510 100%);
+}
+
+.character-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character-card__debug-label {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    font-size: 11px;
+    color: #0f0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2px 6px;
+    border-radius: 2px;
+    white-space: nowrap;
+}

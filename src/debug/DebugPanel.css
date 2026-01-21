@@ -1,0 +1,159 @@
+.debug-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 1px solid #c9a227;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.debug-panel {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 280px;
+    max-height: 90vh;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid #c9a227;
+    border-radius: 8px;
+    z-index: 9999;
+    overflow: hidden;
+    font-family: 'Consolas', monospace;
+    font-size: 12px;
+}
+
+.debug-panel__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #c9a227;
+    color: #000;
+}
+
+.debug-panel__header h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.debug-panel__header-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.debug-panel__header button {
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 6px;
+}
+
+.debug-edit-toggle {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 4px;
+    font-size: 11px !important;
+}
+
+.debug-edit-toggle.active {
+    background: #0a0 !important;
+    color: #fff !important;
+}
+
+.debug-panel__edit-hint {
+    padding: 8px 12px;
+    background: rgba(0, 170, 0, 0.2);
+    color: #0f0;
+    text-align: center;
+    font-size: 11px;
+    border-bottom: 1px solid rgba(0, 170, 0, 0.3);
+}
+
+.debug-panel__content {
+    padding: 8px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.debug-panel__item {
+    padding: 8px;
+    margin-bottom: 8px;
+    background: rgba(50, 50, 50, 0.8);
+    border-radius: 4px;
+    border: 2px solid rgba(201, 162, 39, 0.3);
+    transition: border-color 0.2s;
+}
+
+.debug-panel__item:hover {
+    border-color: rgba(201, 162, 39, 0.6);
+}
+
+.debug-panel__item.selected {
+    border-color: #0f0;
+    background: rgba(0, 100, 0, 0.3);
+}
+
+.debug-panel__item-header {
+    margin-bottom: 8px;
+    color: #c9a227;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.debug-panel__selected-badge {
+    background: #0f0;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.debug-panel__controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+}
+
+.debug-panel__controls label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #aaa;
+}
+
+.debug-panel__controls input {
+    width: 60px;
+    padding: 4px;
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 11px;
+}
+
+.debug-panel__footer {
+    padding: 8px;
+    border-top: 1px solid rgba(201, 162, 39, 0.3);
+}
+
+.debug-panel__footer button {
+    width: 100%;
+    padding: 8px;
+    background: #c9a227;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.debug-panel__footer button:hover {
+    background: #d4b037;
+}

@@ -1,0 +1,21 @@
+.choice-hand {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+}
+
+.choice-hand__cards {
+    display: flex;
+    gap: -20px;
+    /* カードを重ねる */
+    justify-content: center;
+    padding: 20px 40px;
+}
+
+/* GSAP アニメーション用の初期状態 */
+.choice-hand--entering .choice-card {
+    opacity: 0;
+    transform: translateY(100px);
+}

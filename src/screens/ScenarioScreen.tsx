@@ -1,7 +1,9 @@
 import { useEffect, useCallback } from 'react';
 import { useScenarioStore } from '../core/stores/useScenarioStore';
 import { useGameStore } from '../core/stores/useGameStore';
+import { useTalkStore } from '../core/stores/useTalkStore';
 import demoScenarioData from '../data/novel/demo_scenario.json';
+import demoTalkData from '../data/talk/demo_talk.json';
 import type { ScenarioData } from '../types/scenario';
 import './ScenarioScreen.css';
 
@@ -19,7 +21,7 @@ const cardImageMap: Record<string, string> = {
 
 // Background ID to image path mapping
 const bgImageMap: Record<string, string> = {
-    'bg_tavern': '/assets/bg/bg_forest_day.png', // Placeholder - using forest for now
+    'bg_tavern': '/assets/bg/bg_forest_day.png',
     'bg_deep_forest': '/assets/bg/bg_forest_day.png',
     'bg_deep_forest_boss': '/assets/bg/bg_forest_day.png',
     'bg_flower_garden': '/assets/bg/bg_forest_day.png',
@@ -27,6 +29,7 @@ const bgImageMap: Record<string, string> = {
 
 export function ScenarioScreen() {
     const { navigateTo } = useGameStore();
+    const { openTalk, isVisible: isTalkVisible } = useTalkStore();
     const {
         loadScenario,
         nextCommand,
@@ -42,56 +45,59 @@ export function ScenarioScreen() {
     // Load scenario on mount
     useEffect(() => {
         loadScenario(demoScenarioData as ScenarioData);
-        // Process first command
         setTimeout(() => {
             const cmd = useScenarioStore.getState().nextCommand();
             if (cmd) useScenarioStore.getState().processCommand(cmd);
         }, 100);
     }, [loadScenario]);
 
+    // シナリオ終了後 → Talk シーン → マップへ遷移
+    const handleScenarioEnd = useCallback(() => {
+        // Talk シーンを開始
+        openTalk(demoTalkData.dialogs);
+    }, [openTalk]);
+
+    // Talk終了後にマップへ遷移
+    useEffect(() => {
+        // Talk が閉じられたらマップへ
+        const unsubscribe = useTalkStore.subscribe((state, prevState) => {
+            if (prevState.isVisible && !state.isVisible) {
+                navigateTo('map');
+            }
+        });
+        return () => unsubscribe();
+    }, [navigateTo]);
+
     // Handle click to advance text
     const handleClick = useCallback(() => {
-        console.log('[DEBUG] handleClick triggered');
-        console.log('[DEBUG] isWaitingForInput:', isWaitingForInput);
-        console.log('[DEBUG] currentChoices:', currentChoices);
+        if (isTalkVisible) return; // Talk表示中は進行しない
 
         if (!isWaitingForInput || currentChoices) {
-            console.log('[DEBUG] Early return - not waiting or has choices');
             return;
         }
 
         const cmd = nextCommand();
-        console.log('[DEBUG] nextCommand returned:', cmd);
 
         if (cmd) {
-            console.log('[DEBUG] Processing command:', cmd.type);
             processCommand(cmd);
 
-            // Check if scenario ended after processing
             setTimeout(() => {
                 const state = useScenarioStore.getState();
-                console.log('[DEBUG] After processing - sceneId:', state.currentSceneId);
-                console.log('[DEBUG] After processing - commandIndex:', state.commandIndex);
-
                 const scene = state.scenarioData?.scenes[state.currentSceneId];
                 const sceneLength = scene?.length || 0;
-                console.log('[DEBUG] Scene length:', sceneLength);
-                console.log('[DEBUG] Is end?:', state.commandIndex >= sceneLength);
-                console.log('[DEBUG] Has choices?:', !!state.currentChoices);
 
                 if (!scene || state.commandIndex >= sceneLength) {
-                    // End of scenario - navigate to map
                     if (!state.currentChoices) {
-                        console.log('[DEBUG] *** NAVIGATING TO MAP ***');
-                        navigateTo('map');
+                        // シナリオ終了 → Talk シーンへ
+                        handleScenarioEnd();
                     }
                 }
             }, 50);
         } else {
-            console.log('[DEBUG] No command - END OF SCENARIO - navigating to map');
-            navigateTo('map');
+            // シナリオ終了 → Talk シーンへ
+            handleScenarioEnd();
         }
-    }, [isWaitingForInput, currentChoices, nextCommand, processCommand, navigateTo]);
+    }, [isTalkVisible, isWaitingForInput, currentChoices, nextCommand, processCommand, handleScenarioEnd]);
 
     // Handle choice selection
     const handleChoice = useCallback((index: number) => {
@@ -124,7 +130,7 @@ export function ScenarioScreen() {
             </div>
 
             {/* Text window */}
-            {currentText && (
+            {currentText && !isTalkVisible && (
                 <div className="scenario-text-window">
                     {currentText.speaker && (
                         <div className="scenario-speaker">{currentText.speaker}</div>
@@ -137,7 +143,7 @@ export function ScenarioScreen() {
             )}
 
             {/* Choice buttons */}
-            {currentChoices && (
+            {currentChoices && !isTalkVisible && (
                 <div className="scenario-choices">
                     {currentChoices.map((choice, index) => (
                         <button

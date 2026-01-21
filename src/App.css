@@ -11,22 +11,20 @@ body {
   overflow: hidden;
 }
 
-/* Title Screen */
+/* Title Screen - 1920x1080固定ビューポート用 */
 .title-screen {
-  min-height: 100vh;
-  min-height: 100dvh;
-  /* Dynamic viewport height for mobile */
-  width: 100vw;
+  width: 1920px;
+  height: 1080px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #1a1410 0%, #0d0a08 100%);
-  padding: 20px;
+  position: relative;
 }
 
 .game-title {
-  font-size: clamp(32px, 8vw, 64px);
+  font-size: 64px;
   color: #c9a227;
   text-shadow:
     2px 2px 4px rgba(0, 0, 0, 0.8),
@@ -36,9 +34,9 @@ body {
 }
 
 .subtitle {
-  font-size: clamp(14px, 3vw, 20px);
+  font-size: 20px;
   color: #888;
-  margin-bottom: clamp(24px, 5vh, 48px);
+  margin-bottom: 48px;
   text-align: center;
 }
 
@@ -46,15 +44,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 100%;
-  max-width: 300px;
-  padding: 0 16px;
+  width: 300px;
 }
 
 .menu-button {
   width: 100%;
-  padding: clamp(12px, 2vh, 16px) clamp(20px, 4vw, 32px);
-  font-size: clamp(14px, 2.5vw, 18px);
+  padding: 16px 32px;
+  font-size: 18px;
   font-family: 'Times New Roman', serif;
   color: #c9a227;
   background: linear-gradient(135deg, #2a2520 0%, #1a1510 100%);
@@ -75,41 +71,17 @@ body {
   cursor: not-allowed;
 }
 
-/* Mobile Landscape (Android横画面) */
-@media (max-height: 500px) and (orientation: landscape) {
-  .title-screen {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 16px;
-  }
-
-  .game-title {
-    font-size: clamp(24px, 6vh, 40px);
-    margin-bottom: 8px;
-  }
-
-  .subtitle {
-    margin-bottom: 16px;
-  }
-
-  .menu-buttons {
-    max-width: 200px;
-    gap: 8px;
-  }
-
-  .menu-button {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
+/* Talk Screen Background */
+.talk-screen {
+  width: 1920px;
+  height: 1080px;
+  background: linear-gradient(135deg, #1a1410 0%, #0d0a08 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Tablet Portrait */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .game-title {
-    font-size: 56px;
-  }
-
-  .menu-buttons {
-    max-width: 350px;
-  }
+.talk-screen .loading {
+  color: #888;
+  font-size: 24px;
 }
