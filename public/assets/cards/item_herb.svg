@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Herb Item -->
+  <ellipse cx="50" cy="85" rx="25" ry="10" fill="#795548"/>
+  <path d="M50 80 Q45 60 35 50 Q50 55 50 30 Q50 55 65 50 Q55 60 50 80" fill="#4CAF50"/>
+  <path d="M50 75 Q40 55 25 45" stroke="#2E7D32" fill="none" stroke-width="3"/>
+  <path d="M50 75 Q60 55 75 45" stroke="#2E7D32" fill="none" stroke-width="3"/>
+  <circle cx="35" cy="45" r="5" fill="#81C784"/>
+  <circle cx="65" cy="45" r="5" fill="#81C784"/>
+  <circle cx="50" cy="30" r="6" fill="#A5D6A7"/>
+</svg>

@@ -1,0 +1,7 @@
+# ダンジョン2階 (5x5)
+# MO=魔物(ボス), UD=上り階段
+DW,DW,MO,DW,DW
+DW,DF,DF,DF,DW
+DW,DF,DF,DF,DW
+DW,DF,DF,DF,DW
+DW,DW,UD,DW,DW

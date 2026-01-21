@@ -1,0 +1,7 @@
+# 薬草採集エリア (5x5)
+# HR=薬草, HF→X1に変更
+GG,GG,HR,GG,GG
+GG,FF,GG,FF,GG
+GG,GG,GG,GG,GG
+GG,FF,GG,FF,GG
+GG,GG,X1,GG,GG

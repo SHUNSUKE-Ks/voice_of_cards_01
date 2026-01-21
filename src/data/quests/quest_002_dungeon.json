@@ -1,0 +1,73 @@
+{
+    "id": "Q002",
+    "title": "魔物討伐",
+    "type": "defeat",
+    "giver": {
+        "npcId": "mayor_house",
+        "location": {
+            "mapId": "town_01",
+            "x": 2,
+            "y": 0
+        }
+    },
+    "objective": {
+        "type": "defeat",
+        "enemyId": "monster",
+        "count": 1,
+        "proofItemId": "monster_horn"
+    },
+    "reward": {
+        "gold": 500
+    },
+    "dialogs": {
+        "not_started": {
+            "speaker": "npc_mayor",
+            "speakerName": "村長",
+            "lines": [
+                "おお、冒険者か。話がある。",
+                "最近、町の南のダンジョンに魔物が住み着いてな…",
+                "ダンジョンの最奥にいる魔物を倒してきてほしい。",
+                "討伐の証として、魔物の角を持ってきてくれ。"
+            ]
+        },
+        "in_progress": {
+            "speaker": "npc_mayor",
+            "speakerName": "村長",
+            "lines": [
+                "魔物はまだ倒していないのか？",
+                "ダンジョンの2階にいるはずだ。"
+            ]
+        },
+        "ready_to_complete": {
+            "speaker": "npc_mayor",
+            "speakerName": "村長",
+            "lines": [
+                "おお！魔物の角を持ってきたか！",
+                "これで町も安全だ。報酬を受け取ってくれ。"
+            ]
+        },
+        "completed": {
+            "speaker": "npc_mayor",
+            "speakerName": "村長",
+            "lines": [
+                "町を守ってくれてありがとう。"
+            ]
+        }
+    },
+    "enemyEncounter": {
+        "enemyName": "ダンジョンモンスター",
+        "enemyStats": {
+            "hp": 50,
+            "attack": 10,
+            "defense": 5
+        }
+    },
+    "itemObtainDialog": {
+        "speaker": "gm",
+        "speakerName": "語り手",
+        "lines": [
+            "魔物を倒した！",
+            "魔物の角を手に入れた。村長に届けよう。"
+        ]
+    }
+}

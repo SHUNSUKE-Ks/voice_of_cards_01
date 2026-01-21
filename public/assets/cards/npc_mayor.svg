@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Mayor (Distinguished look with hat) -->
+  <circle cx="50" cy="35" r="18" fill="#FFD699"/>
+  <rect x="35" y="53" width="30" height="37" rx="5" fill="#1E88E5"/>
+  <rect x="32" y="15" width="36" height="12" rx="2" fill="#5D4037"/>
+  <rect x="38" y="10" width="24" height="8" rx="2" fill="#5D4037"/>
+  <circle cx="43" cy="32" r="2.5" fill="#333"/>
+  <circle cx="57" cy="32" r="2.5" fill="#333"/>
+  <path d="M45 42 Q50 45 55 42" stroke="#333" fill="none" stroke-width="2"/>
+  <rect x="38" y="55" width="24" height="3" fill="#FFD700"/>
+</svg>

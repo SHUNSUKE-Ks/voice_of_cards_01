@@ -1,0 +1,209 @@
+{
+    "$schema": "./quest_progress.schema.json",
+    "version": "1.0",
+    "description": "クエスト進行状況管理",
+    "quests": {
+        "Q001": {
+            "id": "Q001",
+            "title": "薬草採集",
+            "steps": [
+                {
+                    "stepId": 1,
+                    "name": "not_started",
+                    "description": "未開始",
+                    "trigger": null,
+                    "nextStep": 2
+                },
+                {
+                    "stepId": 2,
+                    "name": "accepted",
+                    "description": "クエスト受注済み",
+                    "trigger": {
+                        "type": "npc",
+                        "tileId": "tile_npc_villager",
+                        "mapId": "town_01"
+                    },
+                    "dialog": "quest_001_accept",
+                    "nextStep": 3
+                },
+                {
+                    "stepId": 3,
+                    "name": "herb_obtained",
+                    "description": "薬草を入手",
+                    "trigger": {
+                        "type": "item",
+                        "tileId": "tile_item_herb",
+                        "mapId": "herb_field"
+                    },
+                    "dialog": "quest_001_herb_found",
+                    "giveItem": "herb",
+                    "nextStep": 4
+                },
+                {
+                    "stepId": 4,
+                    "name": "completed",
+                    "description": "クエスト完了",
+                    "trigger": {
+                        "type": "npc",
+                        "tileId": "tile_npc_villager",
+                        "mapId": "town_01"
+                    },
+                    "requireItem": "herb",
+                    "dialog": "quest_001_complete",
+                    "reward": {
+                        "gold": 100
+                    },
+                    "nextStep": null
+                }
+            ]
+        },
+        "Q002": {
+            "id": "Q002",
+            "title": "魔物討伐",
+            "steps": [
+                {
+                    "stepId": 1,
+                    "name": "not_started",
+                    "description": "未開始",
+                    "trigger": null,
+                    "nextStep": 2
+                },
+                {
+                    "stepId": 2,
+                    "name": "accepted",
+                    "description": "クエスト受注済み",
+                    "trigger": {
+                        "type": "building",
+                        "tileId": "tile_house_mayor",
+                        "mapId": "town_01"
+                    },
+                    "dialog": "quest_002_accept",
+                    "nextStep": 3
+                },
+                {
+                    "stepId": 3,
+                    "name": "monster_defeated",
+                    "description": "魔物を討伐",
+                    "trigger": {
+                        "type": "enemy",
+                        "tileId": "tile_enemy_monster",
+                        "mapId": "dungeon_01_f2"
+                    },
+                    "dialog": "quest_002_monster_defeated",
+                    "giveItem": "monster_horn",
+                    "nextStep": 4
+                },
+                {
+                    "stepId": 4,
+                    "name": "completed",
+                    "description": "クエスト完了",
+                    "trigger": {
+                        "type": "building",
+                        "tileId": "tile_house_mayor",
+                        "mapId": "town_01"
+                    },
+                    "requireItem": "monster_horn",
+                    "dialog": "quest_002_complete",
+                    "reward": {
+                        "gold": 500
+                    },
+                    "nextStep": null
+                }
+            ]
+        }
+    },
+    "dialogs": {
+        "quest_001_accept": [
+            {
+                "speaker": "npc_villager",
+                "speakerName": "村人",
+                "content": "おお、冒険者さん！"
+            },
+            {
+                "speaker": "npc_villager",
+                "speakerName": "村人",
+                "content": "薬草を1つ取ってきてほしいんだ。"
+            },
+            {
+                "speaker": "npc_villager",
+                "speakerName": "村人",
+                "content": "町の東にある薬草エリアにあるはずだ。"
+            }
+        ],
+        "quest_001_herb_found": [
+            {
+                "speaker": "gm",
+                "speakerName": "語り手",
+                "content": "薬草を見つけた！"
+            },
+            {
+                "speaker": "gm",
+                "speakerName": "語り手",
+                "content": "村人に届けよう。"
+            }
+        ],
+        "quest_001_complete": [
+            {
+                "speaker": "npc_villager",
+                "speakerName": "村人",
+                "content": "薬草を持ってきてくれたか！"
+            },
+            {
+                "speaker": "npc_villager",
+                "speakerName": "村人",
+                "content": "ありがとう！これが報酬だ。"
+            },
+            {
+                "speaker": "gm",
+                "speakerName": "語り手",
+                "content": "100G を手に入れた！"
+            }
+        ],
+        "quest_002_accept": [
+            {
+                "speaker": "npc_mayor",
+                "speakerName": "村長",
+                "content": "おお、冒険者か。話がある。"
+            },
+            {
+                "speaker": "npc_mayor",
+                "speakerName": "村長",
+                "content": "ダンジョンに魔物が住み着いてな…"
+            },
+            {
+                "speaker": "npc_mayor",
+                "speakerName": "村長",
+                "content": "魔物を倒して、角を持ってきてくれ。"
+            }
+        ],
+        "quest_002_monster_defeated": [
+            {
+                "speaker": "gm",
+                "speakerName": "語り手",
+                "content": "魔物を倒した！"
+            },
+            {
+                "speaker": "gm",
+                "speakerName": "語り手",
+                "content": "魔物の角を手に入れた。村長に届けよう。"
+            }
+        ],
+        "quest_002_complete": [
+            {
+                "speaker": "npc_mayor",
+                "speakerName": "村長",
+                "content": "魔物の角を持ってきたか！"
+            },
+            {
+                "speaker": "npc_mayor",
+                "speakerName": "村長",
+                "content": "町も安全だ。報酬を受け取ってくれ。"
+            },
+            {
+                "speaker": "gm",
+                "speakerName": "語り手",
+                "content": "500G を手に入れた！"
+            }
+        ]
+    }
+}

@@ -1,6 +1,6 @@
 {
-    "mapId": "town_01",
-    "name": "始まりの町",
+    "mapId": "herb_field",
+    "name": "薬草エリア",
     "grid": {
         "width": 5,
         "height": 5
@@ -10,185 +10,178 @@
             "id": "t_0_0",
             "x": 0,
             "y": 0,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_1_0",
             "x": 1,
             "y": 0,
-            "terrainCardId": "tile_shop_weapon",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "武器屋",
-            "buildingType": "weapon"
+            "name": "草地"
         },
         {
             "id": "t_2_0",
             "x": 2,
             "y": 0,
-            "terrainCardId": "tile_house_mayor",
+            "terrainCardId": "tile_item_herb",
             "isTraversable": true,
-            "name": "村長の家",
-            "buildingType": "mayor"
+            "name": "薬草",
+            "itemType": "herb"
         },
         {
             "id": "t_3_0",
             "x": 3,
             "y": 0,
-            "terrainCardId": "tile_shop_armor",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "防具屋",
-            "buildingType": "armor"
+            "name": "草地"
         },
         {
             "id": "t_4_0",
             "x": 4,
             "y": 0,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_0_1",
             "x": 0,
             "y": 1,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_1_1",
             "x": 1,
             "y": 1,
-            "terrainCardId": "tile_npc_villager",
+            "terrainCardId": "tile_forest",
             "isTraversable": true,
-            "name": "村人",
-            "npcType": "villager"
+            "name": "森"
         },
         {
             "id": "t_2_1",
             "x": 2,
             "y": 1,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_3_1",
             "x": 3,
             "y": 1,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_forest",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "森"
         },
         {
             "id": "t_4_1",
             "x": 4,
             "y": 1,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_0_2",
             "x": 0,
             "y": 2,
-            "terrainCardId": "tile_shop_inn",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "宿屋",
-            "buildingType": "inn"
+            "name": "草地"
         },
         {
             "id": "t_1_2",
             "x": 1,
             "y": 2,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_2_2",
             "x": 2,
             "y": 2,
-            "terrainCardId": "tile_fountain",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "噴水",
-            "buildingType": "landmark"
+            "name": "草地"
         },
         {
             "id": "t_3_2",
             "x": 3,
             "y": 2,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_4_2",
             "x": 4,
             "y": 2,
-            "terrainCardId": "tile_church",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "教会",
-            "buildingType": "church"
+            "name": "草地"
         },
         {
             "id": "t_0_3",
             "x": 0,
             "y": 3,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_1_3",
             "x": 1,
             "y": 3,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_forest",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "森"
         },
         {
             "id": "t_2_3",
             "x": 2,
             "y": 3,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_3_3",
             "x": 3,
             "y": 3,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_forest",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "森"
         },
         {
             "id": "t_4_3",
             "x": 4,
             "y": 3,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_0_4",
             "x": 0,
             "y": 4,
-            "terrainCardId": "tile_tavern",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "酒場",
-            "buildingType": "tavern"
+            "name": "草地"
         },
         {
             "id": "t_1_4",
             "x": 1,
             "y": 4,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_2_4",
@@ -203,18 +196,17 @@
             "id": "t_3_4",
             "x": 3,
             "y": 4,
-            "terrainCardId": "tile_town_ground",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "町の地面"
+            "name": "草地"
         },
         {
             "id": "t_4_4",
             "x": 4,
             "y": 4,
-            "terrainCardId": "tile_shop_item",
+            "terrainCardId": "tile_grass",
             "isTraversable": true,
-            "name": "道具屋",
-            "buildingType": "shop"
+            "name": "草地"
         }
     ],
     "startPosition": {

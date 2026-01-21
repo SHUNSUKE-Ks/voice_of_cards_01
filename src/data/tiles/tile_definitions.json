@@ -100,6 +100,58 @@
             "traversable": true,
             "terrainCardId": "tile_tavern",
             "buildingType": "tavern"
+        },
+        "NV": {
+            "name": "村人",
+            "traversable": true,
+            "terrainCardId": "tile_npc_villager",
+            "npcType": "villager"
+        },
+        "HR": {
+            "name": "薬草",
+            "traversable": true,
+            "terrainCardId": "tile_item_herb",
+            "itemType": "herb"
+        },
+        "MO": {
+            "name": "魔物",
+            "traversable": true,
+            "terrainCardId": "tile_enemy_monster",
+            "enemyType": "monster"
+        },
+        "HF": {
+            "name": "薬草エリア入口",
+            "traversable": true,
+            "terrainCardId": "tile_herb_field",
+            "buildingType": "herb_field"
+        },
+        "UD": {
+            "name": "上り階段",
+            "traversable": true,
+            "terrainCardId": "tile_stairs_up",
+            "buildingType": "stairs_up"
+        },
+        "DD": {
+            "name": "下り階段",
+            "traversable": true,
+            "terrainCardId": "tile_stairs_down",
+            "buildingType": "stairs_down"
+        },
+        "DW": {
+            "name": "ダンジョン壁",
+            "traversable": false,
+            "terrainCardId": "tile_dungeon_wall"
+        },
+        "DF": {
+            "name": "ダンジョン床",
+            "traversable": true,
+            "terrainCardId": "tile_dungeon_floor"
+        },
+        "BO": {
+            "name": "ボス",
+            "traversable": true,
+            "terrainCardId": "tile_boss",
+            "enemyType": "boss"
         }
     }
 }

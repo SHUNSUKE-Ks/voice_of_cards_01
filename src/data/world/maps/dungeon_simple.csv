@@ -1,0 +1,7 @@
+# シンプルダンジョン (5x5)
+# DW=壁(0), DF=床(1), BO=ボス, X1=出口
+DW,DW,BO,DW,DW
+DW,DF,DF,DF,DW
+DW,DF,DF,DF,DW
+DW,DF,DF,DF,DW
+DW,DW,X1,DW,DW

@@ -16,7 +16,7 @@ interface MapState {
     pendingMapData: MapJson | null; // 遷移先マップデータ
 
     // Actions
-    loadMap: (mapData: MapJson) => void;
+    loadMap: (mapData: MapJson, spawnPosition?: Position) => void;
     movePlayer: (direction: 'up' | 'down' | 'left' | 'right') => boolean;
     revealTile: (x: number, y: number) => void;
     getTileAt: (x: number, y: number) => TileData | undefined;
@@ -42,8 +42,9 @@ export const useMapStore = create<MapState>((set, get) => ({
     transitionPhase: 'IDLE',
     pendingMapData: null,
 
-    loadMap: (mapData) => {
-        const startPos = (mapData as any).startPosition || (mapData as any).playerStartPos || { x: 3, y: 3 };
+    loadMap: (mapData, spawnPosition) => {
+        // spawnPositionが指定されていればそれを使用、なければmapDataのstartPosition
+        const startPos = spawnPosition || (mapData as any).startPosition || (mapData as any).playerStartPos || { x: 3, y: 3 };
         const revealedTiles = new Set<string>();
         const isTown = (mapData as any).type === 'TOWN' || (mapData as any).initialFace === 'UP';
 

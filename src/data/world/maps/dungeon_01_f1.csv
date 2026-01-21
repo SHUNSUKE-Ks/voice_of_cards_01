@@ -1,0 +1,7 @@
+# ダンジョン1階 (5x5)
+# DD=下り階段, X1=出口(町へ)
+DW,DW,DD,DW,DW
+DW,DF,DF,DF,DW
+DW,DF,DF,DF,DW
+DW,DF,DF,DF,DW
+DW,DW,X1,DW,DW

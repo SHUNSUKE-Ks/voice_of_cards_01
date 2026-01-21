@@ -1,0 +1,63 @@
+{
+    "id": "Q001",
+    "title": "薬草採集",
+    "type": "collect",
+    "giver": {
+        "npcId": "villager",
+        "location": {
+            "mapId": "town_01",
+            "x": 1,
+            "y": 1
+        }
+    },
+    "objective": {
+        "type": "collect",
+        "itemId": "herb",
+        "count": 1
+    },
+    "reward": {
+        "gold": 100
+    },
+    "dialogs": {
+        "not_started": {
+            "speaker": "npc_villager",
+            "speakerName": "村人",
+            "lines": [
+                "おお、冒険者さん！",
+                "ちょうどよかった。薬草を1つ取ってきてほしいんだ。",
+                "町の東にある薬草エリアにあるはずだ。"
+            ]
+        },
+        "in_progress": {
+            "speaker": "npc_villager",
+            "speakerName": "村人",
+            "lines": [
+                "薬草はまだ見つからないのか？",
+                "町の東にある薬草エリアを探してくれ。"
+            ]
+        },
+        "ready_to_complete": {
+            "speaker": "npc_villager",
+            "speakerName": "村人",
+            "lines": [
+                "おお、薬草を持ってきてくれたか！",
+                "ありがとう！これが報酬だ。"
+            ]
+        },
+        "completed": {
+            "speaker": "npc_villager",
+            "speakerName": "村人",
+            "lines": [
+                "薬草のおかげで助かったよ。ありがとう！"
+            ]
+        }
+    },
+    "itemObtainDialog": {
+        "speaker": "gm",
+        "speakerName": "語り手",
+        "lines": [
+            "薬草を見つけた！",
+            "村人に届けよう。"
+        ]
+    }
+}

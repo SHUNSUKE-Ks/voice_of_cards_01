@@ -1,0 +1,215 @@
+{
+    "mapId": "dungeon_01_f2",
+    "name": "ダンジョン2階",
+    "grid": {
+        "width": 5,
+        "height": 5
+    },
+    "tiles": [
+        {
+            "id": "t_0_0",
+            "x": 0,
+            "y": 0,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_1_0",
+            "x": 1,
+            "y": 0,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_2_0",
+            "x": 2,
+            "y": 0,
+            "terrainCardId": "tile_enemy_monster",
+            "isTraversable": true,
+            "name": "魔物"
+        },
+        {
+            "id": "t_3_0",
+            "x": 3,
+            "y": 0,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_4_0",
+            "x": 4,
+            "y": 0,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_0_1",
+            "x": 0,
+            "y": 1,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_1_1",
+            "x": 1,
+            "y": 1,
+            "terrainCardId": "tile_dungeon_floor",
+            "isTraversable": true,
+            "name": "ダンジョン床"
+        },
+        {
+            "id": "t_2_1",
+            "x": 2,
+            "y": 1,
+            "terrainCardId": "tile_dungeon_floor",
+            "isTraversable": true,
+            "name": "ダンジョン床"
+        },
+        {
+            "id": "t_3_1",
+            "x": 3,
+            "y": 1,
+            "terrainCardId": "tile_dungeon_floor",
+            "isTraversable": true,
+            "name": "ダンジョン床"
+        },
+        {
+            "id": "t_4_1",
+            "x": 4,
+            "y": 1,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_0_2",
+            "x": 0,
+            "y": 2,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_1_2",
+            "x": 1,
+            "y": 2,
+            "terrainCardId": "tile_dungeon_floor",
+            "isTraversable": true,
+            "name": "ダンジョン床"
+        },
+        {
+            "id": "t_2_2",
+            "x": 2,
+            "y": 2,
+            "terrainCardId": "tile_dungeon_floor",
+            "isTraversable": true,
+            "name": "ダンジョン床"
+        },
+        {
+            "id": "t_3_2",
+            "x": 3,
+            "y": 2,
+            "terrainCardId": "tile_dungeon_floor",
+            "isTraversable": true,
+            "name": "ダンジョン床"
+        },
+        {
+            "id": "t_4_2",
+            "x": 4,
+            "y": 2,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_0_3",
+            "x": 0,
+            "y": 3,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_1_3",
+            "x": 1,
+            "y": 3,
+            "terrainCardId": "tile_dungeon_floor",
+            "isTraversable": true,
+            "name": "ダンジョン床"
+        },
+        {
+            "id": "t_2_3",
+            "x": 2,
+            "y": 3,
+            "terrainCardId": "tile_dungeon_floor",
+            "isTraversable": true,
+            "name": "ダンジョン床"
+        },
+        {
+            "id": "t_3_3",
+            "x": 3,
+            "y": 3,
+            "terrainCardId": "tile_dungeon_floor",
+            "isTraversable": true,
+            "name": "ダンジョン床"
+        },
+        {
+            "id": "t_4_3",
+            "x": 4,
+            "y": 3,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_0_4",
+            "x": 0,
+            "y": 4,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_1_4",
+            "x": 1,
+            "y": 4,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_2_4",
+            "x": 2,
+            "y": 4,
+            "terrainCardId": "tile_stairs_up",
+            "isTraversable": true,
+            "name": "上り階段",
+            "buildingType": "stairs_up"
+        },
+        {
+            "id": "t_3_4",
+            "x": 3,
+            "y": 4,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        },
+        {
+            "id": "t_4_4",
+            "x": 4,
+            "y": 4,
+            "terrainCardId": "tile_dungeon_wall",
+            "isTraversable": false,
+            "name": "ダンジョン壁"
+        }
+    ],
+    "startPosition": {
+        "x": 7,
+        "y": 7
+    }
+}
