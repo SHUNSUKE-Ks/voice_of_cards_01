@@ -41,7 +41,9 @@
                         "bg",
                         "choice",
                         "jump",
-                        "battle"
+                        "battle",
+                        "talk",
+                        "event"
                     ]
                 }
             },
@@ -66,6 +68,12 @@
                 },
                 {
                     "$ref": "#/definitions/CmdBattle"
+                },
+                {
+                    "$ref": "#/definitions/CmdTalk"
+                },
+                {
+                    "$ref": "#/definitions/CmdEvent"
                 }
             ]
         },
@@ -102,7 +110,9 @@
                     "enum": [
                         "left",
                         "center",
-                        "right"
+                        "right",
+                        "right-top",
+                        "right-bottom"
                     ]
                 },
                 "anim": {
@@ -210,6 +220,135 @@
                 "type",
                 "enemyId",
                 "nextScene"
+            ]
+        },
+        "CmdTalk": {
+            "type": "object",
+            "description": "TalkLayer形式の会話シーケンス",
+            "properties": {
+                "type": {
+                    "const": "talk"
+                },
+                "dialogs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TalkDialog"
+                    }
+                },
+                "nextScene": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type",
+                "dialogs"
+            ]
+        },
+        "CmdEvent": {
+            "type": "object",
+            "description": "イベントカード表示",
+            "properties": {
+                "type": {
+                    "const": "event"
+                },
+                "eventType": {
+                    "type": "string",
+                    "enum": [
+                        "battle",
+                        "treasure",
+                        "quest",
+                        "info"
+                    ]
+                },
+                "title": {
+                    "type": "string"
+                },
+                "subtitle": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "autoCloseDelay": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "type",
+                "eventType",
+                "title"
+            ]
+        },
+        "TalkDialog": {
+            "type": "object",
+            "description": "TalkLayer形式のダイアログ",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "speaker": {
+                    "type": "string"
+                },
+                "speakerName": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "string"
+                },
+                "highlights": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "leftCard": {
+                    "type": "string"
+                },
+                "rightTopCard": {
+                    "type": "string"
+                },
+                "rightBottomCard": {
+                    "type": "string"
+                },
+                "animation": {
+                    "type": "string",
+                    "enum": [
+                        "enter",
+                        "shake",
+                        "fade"
+                    ]
+                },
+                "choices": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TalkChoice"
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "speaker",
+                "speakerName",
+                "content"
+            ]
+        },
+        "TalkChoice": {
+            "type": "object",
+            "description": "選択肢",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "nextDialogId": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "label"
             ]
         }
     }

@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export type ScreenId = 'title' | 'talk' | 'map' | 'battle' | 'scenario' | 'menu' | 'shop' | 'collection';
+export type ScreenId = 'title' | 'talk' | 'city' | 'map' | 'battle' | 'scenario' | 'menu' | 'shop' | 'collection';
 
 interface GameState {
     currentScreen: ScreenId;
