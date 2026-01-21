@@ -1,0 +1,105 @@
+{
+    "$schema": "./tile_definitions.schema.json",
+    "version": "1.0",
+    "tiles": {
+        "__": {
+            "name": "空白",
+            "traversable": false,
+            "terrainCardId": null
+        },
+        "GG": {
+            "name": "草地",
+            "traversable": true,
+            "terrainCardId": "tile_grass"
+        },
+        "WW": {
+            "name": "水",
+            "traversable": false,
+            "terrainCardId": "tile_water"
+        },
+        "FF": {
+            "name": "森",
+            "traversable": true,
+            "terrainCardId": "tile_forest"
+        },
+        "RD": {
+            "name": "道",
+            "traversable": true,
+            "terrainCardId": "tile_road"
+        },
+        "MT": {
+            "name": "山",
+            "traversable": false,
+            "terrainCardId": "tile_mountain"
+        },
+        "TN": {
+            "name": "町",
+            "traversable": true,
+            "terrainCardId": "tile_town"
+        },
+        "DG": {
+            "name": "ダンジョン入口",
+            "traversable": true,
+            "terrainCardId": "tile_dungeon"
+        },
+        "TG": {
+            "name": "町の地面",
+            "traversable": true,
+            "terrainCardId": "tile_town_ground"
+        },
+        "FN": {
+            "name": "噴水",
+            "traversable": true,
+            "terrainCardId": "tile_fountain",
+            "buildingType": "landmark"
+        },
+        "X1": {
+            "name": "出口",
+            "traversable": true,
+            "terrainCardId": "tile_town_exit",
+            "buildingType": "exit"
+        },
+        "SW": {
+            "name": "武器屋",
+            "traversable": true,
+            "terrainCardId": "tile_shop_weapon",
+            "buildingType": "weapon"
+        },
+        "SA": {
+            "name": "防具屋",
+            "traversable": true,
+            "terrainCardId": "tile_shop_armor",
+            "buildingType": "armor"
+        },
+        "SI": {
+            "name": "道具屋",
+            "traversable": true,
+            "terrainCardId": "tile_shop_item",
+            "buildingType": "shop"
+        },
+        "BI": {
+            "name": "宿屋",
+            "traversable": true,
+            "terrainCardId": "tile_shop_inn",
+            "buildingType": "inn"
+        },
+        "BC": {
+            "name": "教会",
+            "traversable": true,
+            "terrainCardId": "tile_church",
+            "buildingType": "church"
+        },
+        "BM": {
+            "name": "村長の家",
+            "traversable": true,
+            "terrainCardId": "tile_house_mayor",
+            "buildingType": "mayor"
+        },
+        "TV": {
+            "name": "酒場",
+            "traversable": true,
+            "terrainCardId": "tile_tavern",
+            "buildingType": "tavern"
+        }
+    }
+}

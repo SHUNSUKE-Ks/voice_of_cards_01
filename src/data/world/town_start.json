@@ -1,0 +1,215 @@
+{
+    "id": "town_start_01",
+    "mapId": "town_start_01",
+    "type": "TOWN",
+    "name": "始まりの町",
+    "initialFace": "UP",
+    "grid": {
+        "width": 5,
+        "height": 5
+    },
+    "startPosition": {
+        "x": 2,
+        "y": 4
+    },
+    "playerStartPos": {
+        "x": 2,
+        "y": 4
+    },
+    "tiles": [
+        {
+            "id": "t_0_0",
+            "x": 0,
+            "y": 0,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_1_0",
+            "x": 1,
+            "y": 0,
+            "terrainCardId": "tile_shop_weapon",
+            "isTraversable": true,
+            "buildingType": "weapon",
+            "name": "武器屋"
+        },
+        {
+            "id": "t_2_0",
+            "x": 2,
+            "y": 0,
+            "terrainCardId": "tile_house_mayor",
+            "isTraversable": true,
+            "buildingType": "mayor",
+            "name": "村長の家"
+        },
+        {
+            "id": "t_3_0",
+            "x": 3,
+            "y": 0,
+            "terrainCardId": "tile_shop_armor",
+            "isTraversable": true,
+            "buildingType": "armor",
+            "name": "防具屋"
+        },
+        {
+            "id": "t_4_0",
+            "x": 4,
+            "y": 0,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_0_1",
+            "x": 0,
+            "y": 1,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_1_1",
+            "x": 1,
+            "y": 1,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_2_1",
+            "x": 2,
+            "y": 1,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_3_1",
+            "x": 3,
+            "y": 1,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_4_1",
+            "x": 4,
+            "y": 1,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_0_2",
+            "x": 0,
+            "y": 2,
+            "terrainCardId": "tile_shop_inn",
+            "isTraversable": true,
+            "buildingType": "inn",
+            "name": "宿屋"
+        },
+        {
+            "id": "t_1_2",
+            "x": 1,
+            "y": 2,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_2_2",
+            "x": 2,
+            "y": 2,
+            "terrainCardId": "tile_fountain",
+            "isTraversable": true,
+            "buildingType": "landmark",
+            "name": "噴水広場"
+        },
+        {
+            "id": "t_3_2",
+            "x": 3,
+            "y": 2,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_4_2",
+            "x": 4,
+            "y": 2,
+            "terrainCardId": "tile_church",
+            "isTraversable": true,
+            "buildingType": "church",
+            "name": "教会"
+        },
+        {
+            "id": "t_0_3",
+            "x": 0,
+            "y": 3,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_1_3",
+            "x": 1,
+            "y": 3,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_2_3",
+            "x": 2,
+            "y": 3,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_3_3",
+            "x": 3,
+            "y": 3,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_4_3",
+            "x": 4,
+            "y": 3,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_0_4",
+            "x": 0,
+            "y": 4,
+            "terrainCardId": "tile_tavern",
+            "isTraversable": true,
+            "buildingType": "tavern",
+            "name": "酒場"
+        },
+        {
+            "id": "t_1_4",
+            "x": 1,
+            "y": 4,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_2_4",
+            "x": 2,
+            "y": 4,
+            "terrainCardId": "tile_town_exit",
+            "isTraversable": true,
+            "buildingType": "exit",
+            "name": "出口",
+            "targetMapId": "test_map_01"
+        },
+        {
+            "id": "t_3_4",
+            "x": 3,
+            "y": 4,
+            "terrainCardId": "tile_town_ground",
+            "isTraversable": true
+        },
+        {
+            "id": "t_4_4",
+            "x": 4,
+            "y": 4,
+            "terrainCardId": "tile_shop_item",
+            "isTraversable": true,
+            "buildingType": "shop",
+            "name": "道具屋"
+        }
+    ]
+}

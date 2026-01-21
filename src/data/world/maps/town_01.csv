@@ -1,0 +1,8 @@
+# 始まりの町 (5x5)
+# TG=町地面, SW=武器屋, BM=村長家, SA=防具屋
+# BI=宿屋, FN=噴水, BC=教会, TV=酒場, X1=出口, SI=道具屋
+TG,SW,BM,SA,TG
+TG,TG,TG,TG,TG
+BI,TG,FN,TG,BC
+TG,TG,TG,TG,TG
+TV,TG,X1,TG,SI

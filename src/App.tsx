@@ -2,11 +2,9 @@ import { useEffect } from 'react';
 import { useGameStore } from './core/stores/useGameStore';
 import { useTalkStore } from './core/stores/useTalkStore';
 import { useEventStore } from './core/stores/useEventStore';
-import { useCityStore, DEMO_CITY } from './core/stores/useCityStore';
 import { MapScreen } from './screens/MapScreen';
 import { TalkLayer } from './layers/TalkLayer/TalkLayer';
 import { EventCard } from './layers/TalkLayer/EventCard';
-import { CityLayer } from './layers/CityLayer/CityLayer';
 import { GameViewport } from './components/GameViewport';
 import { DebugPanel } from './debug/DebugPanel';
 import demoTalkData from './data/talk/demo_talk.json';
@@ -16,7 +14,6 @@ function TitleScreen() {
   const { navigateTo } = useGameStore();
   const { openTalk } = useTalkStore();
   const { showBattleEvent } = useEventStore();
-  const { openCity } = useCityStore();
 
   // New Game: TalkLayer で会話を開始 → 終了後マップへ
   const handleNewGame = () => {
@@ -30,9 +27,9 @@ function TitleScreen() {
     });
   };
 
-  const handleTestCity = () => {
-    openCity(DEMO_CITY);
-    navigateTo('city');
+  // Test Map: 直接マップへ
+  const handleTestMap = () => {
+    navigateTo('map');
   };
 
   return (
@@ -60,9 +57,9 @@ function TitleScreen() {
         </button>
         <button
           className="menu-button"
-          onClick={handleTestCity}
+          onClick={handleTestMap}
         >
-          Test City
+          Test Map
         </button>
       </div>
     </div>
@@ -91,15 +88,6 @@ function TalkScreen() {
   );
 }
 
-// シティ画面（CityLayer表示用の背景）
-function CityScreen() {
-  return (
-    <div className="city-screen">
-      {/* CityLayerはApp内でオーバーレイ表示 */}
-    </div>
-  );
-}
-
 function App() {
   const { currentScreen } = useGameStore();
   const { currentEvent, closeEvent } = useEventStore();
@@ -108,8 +96,6 @@ function App() {
     switch (currentScreen) {
       case 'talk':
         return <TalkScreen />;
-      case 'city':
-        return <CityScreen />;
       case 'map':
         return <MapScreen />;
       case 'title':
@@ -123,7 +109,6 @@ function App() {
       <GameViewport>
         {renderScreen()}
         <TalkLayer />
-        <CityLayer />
         <EventCard event={currentEvent} onClose={closeEvent} />
       </GameViewport>
       <DebugPanel />
